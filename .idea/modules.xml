@@ -3,6 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/examples_java.iml" filepath="$PROJECT_DIR$/.idea/modules/examples_java.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/examples_java_main.iml" filepath="$PROJECT_DIR$/.idea/modules/examples_java_main.iml" group="examples_java" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/examples_java_test.iml" filepath="$PROJECT_DIR$/.idea/modules/examples_java_test.iml" group="examples_java" />
     </modules>
   </component>
 </project>
