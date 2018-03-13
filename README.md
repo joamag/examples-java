@@ -1,2 +1,3 @@
-# examples_java
-Set of Java code examples
+# Examples Java
+
+Set of Java code examples.
