@@ -28,22 +28,26 @@ public class HttpExample {
 
     private static void exampleHttp(String url) throws IOException {
         CloseableHttpResponse response;
-        CloseableHttpClient httpclient = HttpClients.createDefault();
-        HttpGet httpget = new HttpGet(url);
-        response = httpclient.execute(httpget);
+        CloseableHttpClient httpClient = HttpClients.createDefault();
         try {
-            HttpEntity entity = response.getEntity();
-            InputStream inputStream = entity.getContent();
-            BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream));
-            while (true) {
-                String line = bufferedReader.readLine();
-                if (line == null) {
-                    break;
+            HttpGet httpget = new HttpGet(url);
+            response = httpClient.execute(httpget);
+            try {
+                HttpEntity entity = response.getEntity();
+                InputStream inputStream = entity.getContent();
+                BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream));
+                while (true) {
+                    String line = bufferedReader.readLine();
+                    if (line == null) {
+                        break;
+                    }
+                    System.out.println(line);
                 }
-                System.out.println(line);
+            } finally {
+                response.close();
             }
         } finally {
-            response.close();
+            httpClient.close();
         }
     }
 }
