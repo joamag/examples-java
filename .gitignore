@@ -9,6 +9,7 @@ local.properties
 /.gradle
 /.idea/gradle.xml
 /.idea/workspace.xml
+/.idea/uiDesigner.xml
 /.idea/markdown-*.xml
 /.idea/libraries
 /.idea/markdown-navigator
