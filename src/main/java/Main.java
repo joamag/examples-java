@@ -21,7 +21,7 @@ public class Main {
     }
 
     private static void exampleHttp(String url) throws IOException {
-        CloseableHttpResponse response = null;
+        CloseableHttpResponse response;
         CloseableHttpClient httpclient = HttpClients.createDefault();
         HttpGet httpget = new HttpGet(url);
         response = httpclient.execute(httpget);
