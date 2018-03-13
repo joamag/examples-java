@@ -14,11 +14,15 @@ import java.io.InputStreamReader;
 
 public class Main {
 
-    public static void main(String[] args) {
+    public static void run() {
         try {
             HttpExample.run();
         } catch (IOException exception) {
             exception.printStackTrace();
         }
+    }
+
+    public static void main(String[] args) {
+        run();
     }
 }
