@@ -22,6 +22,11 @@ public class HttpExample {
         exampleHttp();
     }
 
+    /**
+     * Runs the typical HTTP request to be expected URL.
+     *
+     * @throws IOException
+     */
     private static void exampleHttp() throws IOException {
         exampleHttp(EXAMPLE_HTTP_URL);
     }
