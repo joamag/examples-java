@@ -25,16 +25,22 @@ public class HttpExample {
     /**
      * Runs the typical HTTP request to be expected URL.
      *
-     * @throws IOException
+     * @throws IOException Raises when an error occurs with the request.
      */
     private static void exampleHttp() throws IOException {
         exampleHttp(EXAMPLE_HTTP_URL);
     }
 
+    /**
+     * Runs a simple HTTP request according to the provided URL string.
+     * The resulting value is going to be printed to the stdout.
+     *
+     * @param url The URL to retrieve the HTTP request.
+     * @throws IOException Raises when an error occurs with the request.
+     */
     private static void exampleHttp(String url) throws IOException {
         CloseableHttpResponse response;
-        CloseableHttpClient httpClient = HttpClients.createDefault();
-        try {
+        try (CloseableHttpClient httpClient = HttpClients.createDefault()) {
             HttpGet httpget = new HttpGet(url);
             response = httpClient.execute(httpget);
             try {
@@ -51,8 +57,6 @@ public class HttpExample {
             } finally {
                 response.close();
             }
-        } finally {
-            httpClient.close();
         }
     }
 }
